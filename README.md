@@ -1,18 +1,28 @@
 # PostCSS Px2rem-media
 
-[PostCSS] plugin for transforming px to rem only in media query block is target to adapt mobile ending.
+> This project is inspired from [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem)
+
+[PostCSS] plugin for transforming px to rem only in media query block is target to adapt mobile ending. This project is insipred from [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) and any options can found in the repo. As much as posible, this project is kept in sync with  [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem)  API.
 
 [PostCSS]: https://github.com/postcss/postcss
 
 ```css
-.foo {
-    /* Input example */
+// input
+a { padding: 10px };
+@media screen and (min-width: 900px) {
+    article {
+      padding: 10px;
+    }
 }
 ```
 
 ```css
-.foo {
-  /* Output example */
+// output
+a { padding: 10px };
+@media screen and (min-width: 900px) {
+    article {
+      padding: 0.625rem;
+    }
 }
 ```
 
@@ -30,7 +40,7 @@ and set this plugin in settings.
 ```diff
 module.exports = {
   plugins: [
-+   require('postcss-size'),
++   require('postcss-px2rem-media'),
     require('autoprefixer')
   ]
 }
