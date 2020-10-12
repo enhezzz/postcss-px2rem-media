@@ -2,7 +2,7 @@
 
 > This project is inspired from [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem)
 
-[中文文档](https://github.com/cuth/postcss-pxtorem/README.cn.md)
+[中文文档](https://github.com/cuth/postcss-pxtorem/README.CN.md)
 
 [PostCSS] plugin for transforming px to rem only in media query block is target to adapt mobile ending. This project is insipred from [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) and any options can found in the repo.As much as posible, this project is kept in sync with  [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem)  API.
 
