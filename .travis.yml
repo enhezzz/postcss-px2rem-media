@@ -1,6 +1,9 @@
 language: node_js
-cache: yarn
+cache: npm
 node_js:
   - node
   - "12"
-  - "10"
+
+jobs:
+  include:
+      - script: npm run jest
