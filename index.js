@@ -96,7 +96,6 @@ function createPxReplace(rootValue, unitPrecision, minPixelValue) {
 }
 
 function blacklistedSelector(blacklist, selector) {
-  console.log(blacklist, selector)
   if (typeof selector !== "string") return;
   return blacklist.some(regex => {
     if (typeof regex === "string") {
@@ -119,7 +118,6 @@ function declarationExists(decls, prop, value) {
 
 module.exports = (opts = { }) => {
     opts = Object.assign({}, defaults, opts);
-    console.log(opts)
 
     convertLegacyOptions(opts);
 
@@ -127,20 +125,23 @@ module.exports = (opts = { }) => {
     const exclude = opts.exclude;
 
 
-    const rootValue =
+    let rootValue, pxReplace
+
+    // Work with options here
+    return {
+        postcssPlugin: 'postcss-px2rem-media',
+        Once (root) {
+          // Calls once per file, since every file has single Root
+          rootValue =
       typeof opts.rootValue === "function"
-        ? opts.rootValue(css.source.input)
+        ? opts.rootValue(root.source.input)
         : opts.rootValue;
-    const pxReplace = createPxReplace(
+    pxReplace = createPxReplace(
       rootValue,
       opts.unitPrecision,
       opts.minPixelValue
     );
-
-    // Work with options here
-    // console.log(opts)
-    return {
-        postcssPlugin: 'postcss-px2rem-media',
+        },
         AtRule: {
           media: atRule => {
             // All @media at-rules
@@ -158,8 +159,6 @@ module.exports = (opts = { }) => {
               return
             }
             atRule.walkDecls((decl, i) => {
-              console.log(decl)
-              console.log(opts)
               if (
                 decl.value.indexOf("px") === -1 ||
                 !satisfyPropList(decl.prop) ||
