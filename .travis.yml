@@ -3,7 +3,6 @@ cache: npm
 node_js:
   - node
   - "12"
-
-jobs:
-  include:
-      - script: npm run jest
+if:
+  - branch = dev
+  - branch = master
