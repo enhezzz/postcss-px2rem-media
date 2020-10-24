@@ -96,7 +96,8 @@ function createPxReplace(rootValue, unitPrecision, minPixelValue) {
 }
 
 function blacklistedSelector(blacklist, selector) {
-  if (typeof selector !== "string") return;
+  //  TODO: how to type selector non-string
+  // if (typeof selector !== "string") return;
   return blacklist.some(regex => {
     if (typeof regex === "string") {
       return selector.indexOf(regex) !== -1;
@@ -117,10 +118,8 @@ function declarationExists(decls, prop, value) {
 
 
 module.exports = (opts = { }) => {
-    opts = Object.assign({}, defaults, opts);
-
     convertLegacyOptions(opts);
-
+    opts = Object.assign({}, defaults, opts);
     const satisfyPropList = createPropListMatcher(opts.propList);
     const exclude = opts.exclude;
 
@@ -167,7 +166,6 @@ module.exports = (opts = { }) => {
                 return;
 
               const value = decl.value.replace(pxRegex, pxReplace);
-
               // if rem unit already exists, do not add or replace
               if (declarationExists(decl.parent, decl.prop, value)) return;
 
