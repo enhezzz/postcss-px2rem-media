@@ -2,6 +2,7 @@
 
 > 这个项目灵感来自于 [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem)
 
+[![Build Status](https://travis-ci.com/enhezzz/postcss-px2rem-media.svg?branch=main)](https://travis-ci.com/enhezzz/postcss-px2rem-media)
 [![Coverage Status](https://coveralls.io/repos/github/enhezzz/postcss-px2rem-media/badge.svg?branch=main)](https://coveralls.io/github/enhezzz/postcss-px2rem-media?branch=main)
 
 [英文文档](README.md)
