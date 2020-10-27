@@ -3,6 +3,7 @@ cache: npm
 node_js:
   - node
   - "12"
-if:
-  - branch = dev
-  - branch = main
+branches:
+  only:
+      - gh-pages
+      - /.*/
