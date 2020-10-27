@@ -5,4 +5,4 @@ node_js:
   - "12"
 if:
   - branch = dev
-  - branch = master
+  - branch = main
