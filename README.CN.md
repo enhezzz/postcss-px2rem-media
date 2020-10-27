@@ -2,6 +2,8 @@
 
 > 这个项目灵感来自于 [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem)
 
+[![Coverage Status](https://coveralls.io/repos/github/enhezzz/postcss-px2rem-media/badge.svg?branch=main)](https://coveralls.io/github/enhezzz/postcss-px2rem-media?branch=main)
+
 [英文文档](README.md)
 
 只对媒体查询块进行px转rem的[PostCSS] 插件，面向移动端适配。这个项目灵感来自于[postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) 并且任何参数可以从此仓库中查找到.这个项目将尽可能得和[postcss-pxtorem](https://github.com/cuth/postcss-pxtorem)  API保持同步。
