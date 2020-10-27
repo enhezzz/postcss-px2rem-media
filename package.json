@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "clean-publish": "^1.1.8",
+    "coveralls": "^3.1.0",
     "eslint": "^7.6.0",
     "eslint-ci": "^1.0.0",
     "eslint-plugin-jest": "^23.20.0",
