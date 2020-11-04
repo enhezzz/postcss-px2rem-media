@@ -15,3 +15,13 @@ jobs:
     - stage: Produce Coverage
       node_js: node
       script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+
+deploy:
+  provider: npm
+  email: 13450737557@163.com
+  api_token: ${NPM_API_TOKEN}
+  access: public
+  edge: true
+  tag: beta
+  on:
+    tags: true
