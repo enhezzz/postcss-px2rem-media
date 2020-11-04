@@ -1,6 +1,6 @@
 {
   "name": "postcss-px2rem-media",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "PostCSS plugin for transforming px to rem only in media query block is target to adapt mobile ending",
   "keywords": [
     "postcss",
