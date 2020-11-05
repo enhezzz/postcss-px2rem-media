@@ -24,9 +24,8 @@ jobs:
 
 deploy:
   provider: npm
-  email: 13450737557@163.com
-  api_key: ${NPM_API_TOKEN}
-  access: public
+  email: "13450737557@163.com"
+  api_key: NPM_API_TOKEN
   edge: true
   tag: beta
   on:
