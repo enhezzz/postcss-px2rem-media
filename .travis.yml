@@ -11,10 +11,6 @@ branches:
 
 script:
   - echo "Running tests against $(node -v)..."
-  - echo "$(${NPM_API_TOKEN})"
-  - echo "$($NPM_API_TOKEN)"
-  - echo ${NPM_API_TOKEN}
-  - echo $NPM_API_TOKEN
 
 jobs:
   include:
@@ -25,7 +21,7 @@ jobs:
 deploy:
   provider: npm
   email: "13450737557@163.com"
-  api_key: NPM_API_TOKEN=<api_token>
+  api_key: NPM_API_TOKEN
   edge: true
   tag: beta
   on:
