@@ -13,8 +13,8 @@ script:
   - echo "Running tests against $(node -v)..."
   - echo "$(${NPM_API_TOKEN})"
   - echo "$($NPM_API_TOKEN)"
-  - echo ${NPM_API_TOKEN)}
-  - echo $NPM_API_TOKEN)
+  - echo ${NPM_API_TOKEN}
+  - echo $NPM_API_TOKEN
 
 jobs:
   include:
