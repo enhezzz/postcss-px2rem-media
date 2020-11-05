@@ -9,7 +9,12 @@ branches:
       - /.*/
       - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 
-script: echo "Running tests against $(node -v)..."
+script:
+  - echo "Running tests against $(node -v)..."
+  - echo "$(${NPM_API_TOKEN})"
+  - echo "$($NPM_API_TOKEN)"
+  - echo ${NPM_API_TOKEN)}
+  - echo $NPM_API_TOKEN)
 
 jobs:
   include:
@@ -20,7 +25,7 @@ jobs:
 deploy:
   provider: npm
   email: 13450737557@163.com
-  api_token: ${NPM_API_TOKEN}
+  api_key: ${NPM_API_TOKEN}
   access: public
   edge: true
   tag: beta
