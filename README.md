@@ -4,6 +4,7 @@
 
 [![Build Status](https://travis-ci.com/enhezzz/postcss-px2rem-media.svg?branch=main)](https://travis-ci.com/enhezzz/postcss-px2rem-media)
 [![Coverage Status](https://coveralls.io/repos/github/enhezzz/postcss-px2rem-media/badge.svg?branch=main)](https://coveralls.io/github/enhezzz/postcss-px2rem-media?branch=main)
+[![npm version](https://badge.fury.io/js/postcss-px2rem-media.svg)](https://badge.fury.io/js/postcss-px2rem-media)
 
 [中文文档](README.CN.md)
 
